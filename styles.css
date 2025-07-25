@@ -11,7 +11,7 @@
     --accent-glow: rgba(30, 144, 255, 0.6); /* Подсветка */
     --error-red: #e63946; /* Ошибка */
     --success-green: #2a9d8f; /* Успех */
-    --parallax-bg: url('img/beach-background.jpg') center/cover fixed; /* Параллакс */
+    --parallax-bg: url('img/beach-background.jpg') center/cover no-repeat; /* Параллакс */
 }
 
 * {
@@ -29,10 +29,9 @@ html, body {
 }
 
 body {
-    padding-top: 90px;
+    padding-top: 70px;
     font-size: 16px;
-    line-height: 1.7;
-    background-attachment: fixed;
+    line-height: 1.6;
 }
 
 /* Header */
@@ -44,7 +43,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 30px;
+    padding: 10px 20px;
     background: var(--glass-bg);
     backdrop-filter: var(--glass-blur);
     border-bottom: 2px solid rgba(30, 144, 255, 0.4);
@@ -53,16 +52,16 @@ header {
 }
 
 .logo img {
-    height: 48px;
+    height: 40px;
     animation: bounceIn 1.5s ease;
 }
 
 .logo span {
     font-family: 'Playfair Display', serif;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 700;
     color: var(--primary-blue);
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
     animation: fadeIn 1s ease 0.5s backwards;
 }
 
@@ -76,10 +75,11 @@ nav a {
     font-weight: 500;
     color: var(--text-light);
     text-decoration: none;
-    margin: 0 18px;
-    padding: 8px 12px;
+    margin: 0 12px;
+    padding: 6px 10px;
     border-radius: 6px;
     transition: all 0.3s ease;
+    font-size: 0.95em;
 }
 
 nav a:hover {
@@ -93,7 +93,7 @@ nav a:hover {
     background: none;
     border: none;
     color: var(--primary-blue);
-    font-size: 2em;
+    font-size: 1.8em;
     cursor: pointer;
     transition: transform 0.3s;
     animation: pulse 2s infinite;
@@ -106,12 +106,12 @@ nav a:hover {
 /* Hero */
 .hero {
     background: linear-gradient(to bottom, rgba(30, 144, 255, 0.5), rgba(255, 245, 220, 0.9));
-    padding: 140px 20px;
+    padding: 100px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    min-height: 85vh;
+    min-height: 70vh;
     position: relative;
     animation: zoomIn 1.5s ease-out;
 }
@@ -130,21 +130,21 @@ nav a:hover {
     z-index: 2;
     color: white;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-    max-width: 800px;
+    max-width: 700px;
 }
 
 .hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 3.8em;
+    font-size: 3em;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     animation: bounceInDown 1s ease;
 }
 
 .hero p.intro {
-    font-size: 1.2em;
-    max-width: 700px;
-    margin: 20px auto;
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 15px auto;
     animation: fadeInUp 1s ease 0.5s backwards;
 }
 
@@ -154,8 +154,8 @@ nav a:hover {
 }
 
 .features li {
-    font-size: 1.1em;
-    margin: 12px 0;
+    font-size: 1em;
+    margin: 10px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,8 +164,8 @@ nav a:hover {
 
 .features li::before {
     content: '🌊';
-    margin-right: 10px;
-    font-size: 1.2em;
+    margin-right: 8px;
+    font-size: 1.1em;
 }
 
 /* CTA */
@@ -173,8 +173,8 @@ nav a:hover {
     background: var(--glass-bg);
     backdrop-filter: var(--glass-blur);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 14px 28px;
-    border-radius: 12px;
+    padding: 12px 24px;
+    border-radius: 10px;
     color: var(--text-light);
     text-decoration: none;
     font-family: 'Inter', sans-serif;
@@ -193,41 +193,41 @@ nav a:hover {
 .cta.secondary {
     background: rgba(135, 206, 235, 0.2);
     border: 1px solid rgba(135, 206, 235, 0.4);
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 /* Sections */
 section {
-    padding: 100px 20px;
+    padding: 80px 15px;
     background: linear-gradient(to bottom, rgba(255, 245, 220, 0.8), rgba(30, 144, 255, 0.25));
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 400px;
+    min-height: 300px;
 }
 
 section h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.2em; /* Уменьшен размер */
-    margin: 20px auto 40px;
-    padding-top: 20px;
+    font-size: 2.2em;
+    margin: 15px auto 30px;
+    padding-top: 15px;
     color: var(--primary-blue);
     text-shadow: 0 2px 8px rgba(30, 144, 255, 0.4);
     text-align: center;
     z-index: 2;
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
     position: relative;
 }
 
 /* Cottages Grid */
 .cottages-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
     justify-content: center;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -235,22 +235,22 @@ section h2 {
     background: var(--glass-bg);
     backdrop-filter: var(--glass-blur);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    padding: 25px;
+    border-radius: 15px;
+    padding: 20px;
     transition: all 0.4s ease;
     animation: flipInY 1s ease;
 }
 
 .cottages-item:hover {
-    transform: translateY(-12px) rotate(1deg);
+    transform: translateY(-10px) rotate(1deg);
     box-shadow: 0 8px 20px var(--accent-glow);
 }
 
 .cottages-item img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 10px;
     transition: transform 0.3s;
 }
 
@@ -260,31 +260,31 @@ section h2 {
 
 .cottages-item h3 {
     font-family: 'Playfair Display', serif;
-    margin: 20px 0 10px;
-    font-size: 1.6em;
+    margin: 15px 0 10px;
+    font-size: 1.4em;
     color: var(--primary-blue);
     animation: fadeIn 1s ease 0.5s backwards;
 }
 
 .cottages-item p {
     color: var(--text-secondary);
-    font-size: 0.95em;
+    font-size: 0.9em;
     animation: fadeIn 1s ease 0.7s backwards;
 }
 
 .stock-status {
     background: var(--success-green);
-    padding: 10px 20px;
-    border-radius: 8px;
+    padding: 8px 15px;
+    border-radius: 6px;
     color: white;
-    font-size: 0.9em;
+    font-size: 0.85em;
     text-align: center;
     animation: pulse 2s infinite;
 }
 
 .cta.small {
-    padding: 12px 24px;
-    font-size: 1.1em;
+    padding: 10px 20px;
+    font-size: 1em;
     display: inline-block;
     animation: bounceIn 1s ease 0.9s backwards;
 }
@@ -292,10 +292,10 @@ section h2 {
 /* Services Grid */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 30px;
     justify-content: center;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -303,44 +303,44 @@ section h2 {
     background: var(--glass-bg);
     backdrop-filter: var(--glass-blur);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    padding: 25px;
+    border-radius: 15px;
+    padding: 20px;
     text-align: center;
     transition: all 0.4s ease;
     animation: slideInRight 1s ease;
 }
 
 .service-item:hover {
-    transform: translateY(-12px);
+    transform: translateY(-10px);
     box-shadow: 0 8px 20px var(--accent-glow);
 }
 
 .service-item i {
-    font-size: 2.5em;
+    font-size: 2.2em;
     color: var(--primary-blue);
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     animation: rotateIn 1s ease;
 }
 
 .service-item h4 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: var(--primary-blue);
     animation: fadeIn 1s ease 0.5s backwards;
 }
 
 .service-item p {
-    font-size: 0.95em;
+    font-size: 0.9em;
     color: var(--text-secondary);
 }
 
 /* Special Offers */
 .special-offers-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
     justify-content: center;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -348,27 +348,27 @@ section h2 {
     background: var(--glass-bg);
     backdrop-filter: var(--glass-blur);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    padding: 25px;
+    border-radius: 15px;
+    padding: 20px;
     transition: all 0.4s ease;
     animation: slideInLeft 1s ease;
 }
 
 .special-offer-item:hover {
-    transform: translateY(-12px);
+    transform: translateY(-10px);
     box-shadow: 0 8px 20px var(--accent-glow);
 }
 
 .special-offer-item h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.6em;
+    font-size: 1.4em;
     color: var(--primary-blue);
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     animation: bounceIn 1s ease;
 }
 
 .special-offer-item p {
-    font-size: 0.95em;
+    font-size: 0.9em;
     color: var(--text-secondary);
 }
 
@@ -377,34 +377,34 @@ section h2 {
     background: var(--glass-bg);
     backdrop-filter: var(--glass-blur);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    padding: 40px;
-    max-width: 700px;
-    margin: 30px auto;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 20px auto;
     transition: all 0.4s ease;
     animation: zoomIn 1s ease;
 }
 
 .contact-card:hover {
-    transform: translateY(-12px);
+    transform: translateY(-10px);
     box-shadow: 0 8px 20px var(--accent-glow);
 }
 
 .contact-card p {
-    font-size: 1.1em;
-    margin: 10px 0;
+    font-size: 1em;
+    margin: 8px 0;
     color: var(--text-secondary);
 }
 
 /* Booking Form (Glassmorphism) */
 .booking-form {
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 40px;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
     background: var(--glass-bg);
     backdrop-filter: var(--glass-blur);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
+    border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     animation: fadeInUp 1s ease;
 }
@@ -415,8 +415,8 @@ section h2 {
     color: var(--primary-blue);
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    margin-bottom: 10px;
-    font-size: 1.1em;
+    margin-bottom: 8px;
+    font-size: 1em;
     animation: fadeIn 1s ease 0.5s backwards;
 }
 
@@ -425,19 +425,19 @@ section h2 {
     backdrop-filter: var(--glass-blur);
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: var(--text-light);
-    padding: 14px;
-    border-radius: 10px;
+    padding: 12px;
+    border-radius: 8px;
     transition: all 0.3s ease;
     font-family: 'Inter', sans-serif;
-    font-size: 1em;
+    font-size: 0.95em;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .booking-form select:focus, .booking-form input:focus {
     outline: none;
     border-color: var(--primary-yellow);
-    box-shadow: 0 0 10px var(--accent-glow);
+    box-shadow: 0 0 8px var(--accent-glow);
     transform: scale(1.02);
 }
 
@@ -446,14 +446,14 @@ section h2 {
     backdrop-filter: var(--glass-blur);
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: var(--text-light);
-    padding: 16px 32px;
-    border-radius: 12px;
+    padding: 12px 28px;
+    border-radius: 10px;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     transition: all 0.3s ease;
     cursor: pointer;
     width: 100%;
-    font-size: 1.1em;
+    font-size: 1em;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -467,8 +467,8 @@ section h2 {
 /* Form Message */
 #formMessage {
     text-align: center;
-    font-size: 1.1em;
-    margin-top: 20px;
+    font-size: 1em;
+    margin-top: 15px;
     font-family: 'Inter', sans-serif;
     transition: all 0.3s ease;
 }
@@ -483,22 +483,22 @@ section h2 {
 
 /* Car Details (Cottage Pages) */
 .car-details {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 30px;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
     background: var(--glass-bg);
     backdrop-filter: var(--glass-blur);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
+    border-radius: 15px;
     animation: fadeInUp 1s ease;
 }
 
 .car-details h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.8em;
+    font-size: 2.4em;
     color: var(--primary-blue);
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .back-link {
@@ -508,14 +508,15 @@ section h2 {
     text-decoration: none;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     transition: all 0.3s ease;
+    font-size: 0.95em;
 }
 
 .back-link::before {
     content: '←';
-    margin-right: 8px;
-    font-size: 1.2em;
+    margin-right: 6px;
+    font-size: 1.1em;
 }
 
 .back-link:hover {
@@ -525,8 +526,8 @@ section h2 {
 
 .car-slider-container {
     position: relative;
-    margin: 30px 0;
-    border-radius: 15px;
+    margin: 25px 0;
+    border-radius: 12px;
     overflow: hidden;
 }
 
@@ -546,9 +547,9 @@ section h2 {
 
 .car-slide img {
     width: 100%;
-    height: 450px;
+    height: 350px;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 12px;
     cursor: pointer;
     transition: transform 0.3s ease;
     opacity: 1;
@@ -574,10 +575,10 @@ section h2 {
     backdrop-filter: var(--glass-blur);
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: var(--text-light);
-    padding: 12px 16px;
+    padding: 10px 14px;
     cursor: pointer;
-    font-size: 1.8em;
-    border-radius: 8px;
+    font-size: 1.6em;
+    border-radius: 6px;
     transition: all 0.3s ease;
 }
 
@@ -589,16 +590,16 @@ section h2 {
 .car-slider-thumbnails {
     display: flex;
     justify-content: center;
-    gap: 12px;
-    margin-top: 15px;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 .thumbnail {
-    width: 100px;
-    height: 75px;
+    width: 80px;
+    height: 60px;
     object-fit: cover;
     border: 2px solid transparent;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
     opacity: 1;
@@ -613,13 +614,13 @@ section h2 {
 .car-slider-indicators {
     display: flex;
     justify-content: center;
-    gap: 12px;
-    margin-top: 15px;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 .car-slider-indicators .indicator {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     cursor: pointer;
@@ -647,10 +648,10 @@ section h2 {
 
 .modal-close {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 20px;
+    right: 20px;
     color: white;
-    font-size: 2.5em;
+    font-size: 2em;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -661,9 +662,9 @@ section h2 {
 }
 
 #modalImage {
-    max-width: 95%;
-    max-height: 95vh;
-    border-radius: 15px;
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -675,10 +676,10 @@ section h2 {
     backdrop-filter: var(--glass-blur);
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: var(--text-light);
-    padding: 12px 16px;
+    padding: 10px 14px;
     cursor: pointer;
-    font-size: 1.8em;
-    border-radius: 8px;
+    font-size: 1.6em;
+    border-radius: 6px;
     transition: all 0.3s ease;
 }
 
@@ -688,11 +689,11 @@ section h2 {
 }
 
 .modal-prev {
-    left: 30px;
+    left: 20px;
 }
 
 .modal-next {
-    right: 30px;
+    right: 20px;
 }
 
 /* Footer */
@@ -702,30 +703,30 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     color: var(--text-light);
     text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
+    padding: 15px;
+    font-size: 0.85em;
     animation: fadeInUp 1s ease;
 }
 
 /* Media Queries */
 @media (max-width: 1024px) {
     .hero h1 {
-        font-size: 3em;
+        font-size: 2.6em;
     }
     .car-details {
         max-width: 90%;
     }
     .cottages-grid, .services-grid, .special-offers-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
 }
 
 @media (max-width: 768px) {
     body {
-        padding-top: 70px;
+        padding-top: 60px;
     }
     header {
-        padding: 12px 20px;
+        padding: 10px 15px;
     }
     nav {
         flex-direction: column;
@@ -734,11 +735,11 @@ footer {
         background: var(--glass-bg);
         backdrop-filter: var(--glass-blur);
         position: absolute;
-        top: 70px;
+        top: 60px;
         right: 0;
-        width: 250px;
-        padding: 20px;
-        border-radius: 0 0 10px 10px;
+        width: 200px;
+        padding: 15px;
+        border-radius: 0 0 8px 8px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
     nav.active {
@@ -746,59 +747,106 @@ footer {
         animation: slideInRight 0.5s ease;
     }
     nav a {
-        margin: 10px 0;
-        font-size: 1.1em;
+        margin: 8px 0;
+        font-size: 0.9em;
+        padding: 8px;
     }
     .menu-toggle {
         display: block;
     }
     .hero {
-        padding: 100px 20px;
-        min-height: 70vh;
+        padding: 80px 10px;
+        min-height: 60vh;
     }
     .hero h1 {
-        font-size: 2.4em;
+        font-size: 2.2em;
     }
     .hero p.intro {
-        font-size: 1em;
+        font-size: 0.95em;
     }
     .cottages-item, .special-offer-item {
         max-width: 100%;
     }
     .car-slide img {
-        height: 300px;
+        height: 250px;
     }
     .thumbnail {
-        width: 80px;
-        height: 60px;
+        width: 70px;
+        height: 50px;
     }
     .booking-form {
-        padding: 25px;
+        padding: 20px;
     }
     .submit-btn {
-        padding: 14px 24px;
+        padding: 10px 20px;
     }
 }
 
 @media (max-width: 480px) {
+    html, body {
+        background-attachment: scroll; /* Отключаем fixed для мобильных */
+    }
     .hero h1 {
-        font-size: 2em;
+        font-size: 1.8em;
     }
     section h2 {
         font-size: 1.8em;
+        margin: 10px auto 20px;
+        padding-top: 10px;
     }
     .cottages-item img, .car-slide img {
-        height: 200px;
+        height: 160px;
     }
     .thumbnail {
         width: 60px;
         height: 45px;
     }
     .booking-form {
-        padding: 20px;
+        padding: 15px;
+        margin: 20px auto;
     }
     .contact-card {
-        padding: 20px;
+        padding: 15px;
+    }
+    .car-details {
+        padding: 15px;
+        margin: 20px auto;
+    }
+    .car-details h1 {
+        font-size: 2em;
+    }
+    .submit-btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+    .booking-form select, .booking-form input {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+    .booking-form label {
+        font-size: 0.9em;
+    }
+    .car-slider-buttons {
+        top: 40%;
+    }
+    #prevCar, #nextCar {
+        padding: 8px 12px;
+        font-size: 1.4em;
+    }
+    .modal-close {
+        top: 15px;
+        right: 15px;
+        font-size: 1.8em;
+    }
+    .modal-prev, .modal-next {
+        padding: 8px 12px;
+        font-size: 1.4em;
+    }
+    .modal-prev {
+        left: 15px;
+    }
+    .modal-next {
+        right: 15px;
     }
 }
 
