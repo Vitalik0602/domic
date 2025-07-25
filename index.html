@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крымские Домики</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Логотип Крымские Домики">
+            <span>Крымские Домики</span>
+        </div>
+        <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#cottages">Домики</a>
+            <a href="#services">Услуги</a>
+            <a href="#special-offers">Спецпредложения</a>
+            <a href="#contacts">Контакты</a>
+            <a href="#booking" class="cta">Забронировать</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Добро пожаловать в Крымские Домики</h1>
+                <p class="intro">Отдыхайте с комфортом в наших уютных домиках у Азовского моря!</p>
+                <ul class="features">
+                    <li>Комфортабельные домики</li>
+                    <li>800 м до моря</li>
+                    <li>Красивый вид</li>
+                    <li>Бесплатный Wi-Fi</li>
+                </ul>
+                <a href="#booking" class="cta">Забронировать сейчас</a>
+                <a href="#cottages" class="cta secondary">Посмотреть домики</a>
+            </div>
+        </section>
+
+        <section id="cottages">
+            <h2>Наши домики</h2>
+            <div class="cottages-grid">
+                <div class="cottages-item">
+                    <img src="img/cottage1.jpg" alt="Домик Морской Бриз">
+                    <h3>Морской Бриз</h3>
+                    <p>2 спальни, 50 м², 800 м от моря.</p>
+                    <p class="stock-status">В наличии</p>
+                    <a href="cottage1.html" class="cta small">Подробнее</a>
+                </div>
+                <div class="cottages-item">
+                    <img src="img/cottage1.jpg" alt="Домик Солнечный">
+                    <h3>Солнечный</h3>
+                    <p>3 спальни, 70 м², 800 м от моря.</p>
+                    <p class="stock-status">В наличии</p>
+                    <a href="cottage2.html" class="cta small">Подробнее</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>Услуги</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <i class="fas fa-wifi"></i>
+                    <h4>Wi-Fi</h4>
+                    <p>Бесплатный высокоскоростной интернет.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-parking"></i>
+                    <h4>Парковка</h4>
+                    <p>Бесплатная парковка для гостей.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-utensils"></i>
+                    <h4>Кухня</h4>
+                    <p>Полностью оборудованная кухня.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-swimming-pool"></i>
+                    <h4>Бассейн</h4>
+                    <p>Доступ к бассейну на территории.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="special-offers">
+            <h2>Спецпредложения</h2>
+            <div class="special-offers-grid">
+                <div class="special-offer-item">
+                    <h3>Скидка 10%</h3>
+                    <p>Забронируйте на неделю и получите скидку 10%!</p>
+                </div>
+                <div class="special-offer-item">
+                    <h3>Семейный пакет</h3>
+                    <p>Скидка 15% для семей с детьми до 12 лет.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts">
+            <h2>Контакты</h2>
+            <div class="contact-card">
+                <p>📍 Адрес: ул. Морская, 123, Крым</p>
+                <p>📞 Телефон: +7 (999) 123-45-67</p>
+                <p>📧 Email: info@crimeacottages.ru</p>
+            </div>
+        </section>
+
+        <section id="booking">
+            <h2>Забронировать</h2>
+            <form id="bookingForm" class="booking-form">
+                <label for="cottageSelect">Выберите домик:</label>
+                <select id="cottageSelect" name="cottageSelect" required>
+                    <option value="" disabled selected>Выберите домик</option>
+                    <option value="Морской Бриз">Морской Бриз</option>
+                    <option value="Солнечный">Солнечный</option>
+                </select>
+                
+                <label for="checkIn">Дата заезда:</label>
+                <input type="date" id="checkIn" name="checkIn" required>
+                
+                <label for="checkOut">Дата выезда:</label>
+                <input type="date" id="checkOut" name="checkOut" required>
+                
+                <label for="guests">Количество гостей:</label>
+                <input type="number" id="guests" name="guests" min="1" required>
+                
+                <label for="fullName">ФИО:</label>
+                <input type="text" id="fullName" name="fullName" required>
+                
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <button type="submit" class="submit-btn">Отправить</button>
+                <div id="formMessage"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Крымские Домики. Все права защищены.</p>
+    </footer>
+</body>
+</html>
