@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 Гостей: ${guests}  
 ФИО: ${fullName}  
 Телефон: ${phone}  
-Время заявки: 25.07.2025 14:40 (EDT)
+Время заявки: 25.07.2025 14:46 (EDT)
             `;
 
             fetch(`${TELEGRAM_API_URL}/sendMessage`, {
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
 Гостей: ${guests}  
 ФИО: ${fullName}  
 Телефон: ${phone}  
-Время заявки: 25.07.2025 14:40 (EDT)
+Время заявки: 25.07.2025 14:46 (EDT)
             `;
 
             fetch(`${TELEGRAM_API_URL}/sendMessage`, {
