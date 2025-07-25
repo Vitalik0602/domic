@@ -5,6 +5,31 @@ const TELEGRAM_API_URL = `https://api.telegram.org/bot${TOKEN}`;
 const messageSentSound = new Audio('https://www.soundjay.com/buttons/beep-01a.mp3');
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Parallax effect
+    const parallaxBg = document.createElement('div');
+    parallaxBg.className = 'parallax-bg';
+    parallaxBg.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('img/beach-background.jpg') center/cover no-repeat;
+        z-index: -1;
+        transform: translate3d(0, 0, 0);
+    `;
+    document.body.prepend(parallaxBg);
+
+    const updateParallax = () => {
+        const scrollY = window.scrollY;
+        const parallaxSpeed = 0.5;
+        parallaxBg.style.transform = `translate3d(0, ${scrollY * parallaxSpeed}px, 0)`;
+    };
+
+    window.addEventListener('scroll', updateParallax);
+    window.addEventListener('resize', updateParallax);
+    updateParallax();
+
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
     if (menuToggle && nav) {
@@ -44,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 Гостей: ${guests}  
 ФИО: ${fullName}  
 Телефон: ${phone}  
-Время заявки: 25.07.2025 14:46 (EDT)
+Время заявки: 25.07.2025 14:53 (EDT)
             `;
 
             fetch(`${TELEGRAM_API_URL}/sendMessage`, {
@@ -110,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
 Гостей: ${guests}  
 ФИО: ${fullName}  
 Телефон: ${phone}  
-Время заявки: 25.07.2025 14:46 (EDT)
+Время заявки: 25.07.2025 14:53 (EDT)
             `;
 
             fetch(`${TELEGRAM_API_URL}/sendMessage`, {
