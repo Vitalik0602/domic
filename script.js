@@ -1,5 +1,5 @@
-const TOKEN = '';
-const CHAT_ID = '';
+const TOKEN = '7990942936:AAG1lRKSS2r1Q2_svd2L41ngtp43LBpFMeo';
+const CHAT_ID = '-1002816551291';
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${TOKEN}`;
 
 const messageSentSound = new Audio('https://www.soundjay.com/buttons/beep-01a.mp3');
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 Гостей: ${guests}  
 ФИО: ${fullName}  
 Телефон: ${phone}  
-Время заявки: 25.07.2025 14:30 (EDT)
+Время заявки: 25.07.2025 14:40 (EDT)
             `;
 
             fetch(`${TELEGRAM_API_URL}/sendMessage`, {
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
 Гостей: ${guests}  
 ФИО: ${fullName}  
 Телефон: ${phone}  
-Время заявки: 25.07.2025 14:30 (EDT)
+Время заявки: 25.07.2025 14:40 (EDT)
             `;
 
             fetch(`${TELEGRAM_API_URL}/sendMessage`, {
